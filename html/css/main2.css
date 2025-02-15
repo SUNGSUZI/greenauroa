@@ -1,0 +1,339 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid #3dc0b4;
+    background-color: #3dc0b4;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 50px;
+    cursor: pointer;
+    /* box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.2); */
+}
+
+/* content 작업 시작 */
+.content {
+    width: 100%;
+    padding: 100px;
+}
+
+.content .content_name {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+/* content 작업 끝 */
+
+/* table 작업 시작 */
+.table {
+    table-layout: fixed;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.table_top {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto 20px;
+    font-size: 14px;
+}
+
+.table_top thead tr {
+    border-top: 1px solid #000 !important;
+    border-bottom: 1px solid #000 !important;
+}
+
+.table_top thead tr th {
+    font-weight: bold;
+    color: #000;
+}
+
+.table_top tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.table_top th, td {
+    padding: 15px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden; /* 넘치는 텍스트를 숨김 */
+    text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+}
+
+    /* notice 부분 시작 */
+    .notice_num {
+        width: 60px;
+        min-width: 60px;
+    }
+
+    .notice_title {
+        min-width: 140px;
+        text-align: left;
+    }
+    .notice_writer {
+        width: 80px;
+        min-width: 80px;
+    }
+
+    .notice_date {
+        width: 100px;
+        min-width: 100px;
+        color: #919191;
+    }
+    /* notice 부분 끝 */
+
+    /* qna 부분 시작 */
+    .qna_num {
+        width: 60px;
+        min-width: 60px;
+    }
+
+    .qna_title {
+        width: 80px;
+        min-width: 80px;
+    }
+    .qna_content {
+        min-width: 140px;
+        text-align: left;
+    }
+
+    .qna_date {
+        width: 100px;
+        min-width: 100px;
+        color: #919191;
+    }
+    /* notice 부분 끝 */
+
+/* table 작업 끝 */
+
+/* pagination 작업 시작 */ 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.page-button {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-button:hover {
+}
+
+.page-button.active {
+}
+  /* pagination 작업 끝 */ 
+
+/* event 작업 시작 */
+.content_event {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content_event .event {
+    width: calc(33.33% - 20px);
+}
+
+.content_event .event .event_thumb {
+    width: 100%;
+}
+
+.content_event .event .event_text {
+}
+
+.content_event .event .event_text .event_title {
+    margin-top: 4px;
+}
+
+.content_event .event .event_text .event_date {
+    margin-top: 4px;
+    color: #919191 ;
+    font-size: 14px;
+}
+/* event 작업 끝 */
+
+/* event-detail 작업 시작 */
+.event_detail .event_detail_top {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 20px 0 10px;
+}
+
+.event_detail .event_detail_top .event_detail_top_date {
+    margin-top: 5px;
+    color: #919191 ;
+    font-size: 14px;
+}
+
+.event_detail .event_detail_content {
+    margin: 15px 0 15px;
+    width: 100%;
+    max-height: 650px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.event_detail .event_detail_content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.event_detail .event_detail_content::-webkit-scrollbar-thumb  {
+    background-color: #3dc0b4;
+    border-radius: 5px;
+}
+
+.event_detail .event_detail_content::-webkit-scrollbar-thumb:hover {
+    background-color: #37ada4;
+}
+
+.event_detail .event_detail_content img {
+    width: 100%;
+}
+
+.event_detail_bottom {
+    margin-top: 30px;
+    text-align: right;
+}
+/* event-detail 작업 끝 */
+
+/* qna 작업 시작 */
+#qna_table {
+    position: relative;
+}
+
+#qna_button {
+    position: absolute;
+    top: -50px;
+    right: 0;
+}
+/* qna 작업 끝 */
+
+/* form 작업 시작 */
+.form
+
+.form-div {
+    margin: 15px 0;
+}
+
+.form-label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.file {
+    display: inline-block;
+    width: 100%;
+}
+
+.file-right {
+    width: 74.4%;
+    background-color: #fff;
+    border-color: #f1f1f1;
+    color: #000;
+}
+.file-left {
+    width: 25%;
+    background-color: #aaa;
+    border-color: #aaa;
+    color: #fff;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+.form_submit {
+    text-align: right;
+}
+/* form 작업 끝 */
+
+
+/* qna-form 작업 시작 */
+#qna {
+    min-width: 450px;
+    margin: 30px 0;
+    border-top: 1px solid #000;
+}
+
+/* qna-form 작업 끝 */
+
+/* qna-detail 작업 시작 */
+.qna_content_text {
+    padding: 8px;
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+
+.qna_content_text::-webkit-scrollbar {
+    width: 10px;
+}
+
+.qna_content_text::-webkit-scrollbar-thumb  {
+    background-color: #3dc0b4;
+    border-radius: 5px;
+}
+
+.qna_content_text::-webkit-scrollbar-thumb:hover {
+    background-color: #37ada4;
+}
+/* qna-detail 작업 시작 */
+
+/* guide 작업 시작 */
+.guide {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 비율 (9 / 16 = 0.5625) */
+    overflow: hidden;
+}
+.guide iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* guide 작업 끝 */

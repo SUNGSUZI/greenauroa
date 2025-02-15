@@ -1,0 +1,167 @@
+* {
+  padding:0;
+  margin:0;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  
+}
+html, body {
+  height: 100%;
+}
+h2{
+  font-size: 20px;
+}
+.main_public{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.main_public .right_menu{
+  box-sizing: border-box;
+  padding: 100px 0px 20px 0px;
+  width: 25%;
+  min-width: 200px;
+  max-width: 300px;
+  height: 100%;
+  background: #3DC0B4;
+  display: flex;
+  flex-direction: column;
+  /* align-items:center; */
+  font-size: 15px;
+}
+.right_menu h2{
+  color:#fff;
+}
+.greet{
+  color:#fff;
+  padding: 20px 0px;
+}
+.right_menu .menu_list{
+  color:#fff;
+  padding-top: 50px;
+}
+.menu_list ul{
+  list-style: none;
+}
+
+.menu_list ul li{
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.menu_list ul img, .logout img{
+  width: 30px;
+  height: 30px;
+}
+.menu_list ul:nth-child(1) div{
+  display: flex;
+  padding: 3px 0px;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+}
+
+.menu_list ul:nth-child(1) div:hover{
+background-color: rgba(238,249,248);
+}
+.menu_list ul:nth-child(1) div:hover > img:nth-child(2){
+  display: block;
+  height: inherit;
+  display: none;
+}
+.menu_list ul:nth-child(1) div:hover > img:nth-child(1){
+  display: block;
+  height: inherit;
+}
+.menu_list ul:nth-child(1) div:hover > span{
+  display: inline-block;
+  height: inherit;
+  color: #3DC0B4;
+}
+.none_hover{
+  display: none;
+}
+.logout{
+  display: flex;
+  gap:5px;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.main_public .left_menu{
+  padding:0px 30px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(238,249,248);
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+.main_public .header_funs{
+  padding: 20px 0px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap:20px;
+  align-items: center;
+  height: 80px;
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink:0;
+}
+
+.icon_style1{
+  width: 40px; 
+  height: 40px;
+}
+
+/* 버튼 */
+.circle_btn1{
+  width: 150px;
+  height: 40px;
+  background-color: #3DC0B4;
+  color:#fff;
+  border: none;
+  text-align: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn2{
+  width: 150px;
+  height: 20px;
+  border: 1px solid #919191;
+  text-align: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn3{
+    width: 200px;
+    padding: 12px;
+    background-color: #3dc0b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    text-align: center;  
+    text-decoration: none;  
+    box-sizing: border-box;   
+    text-decoration: none; 
+}
+
+

@@ -1,0 +1,145 @@
+.right-panel {
+    flex: 1;
+    margin-left: 50%;  
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    padding: 40px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.find-section {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-text {
+    color: #3dc0b4;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+
+.find-section h2 {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.resident-number-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resident-number {
+    flex: 1;
+}
+
+.resident-divider {
+    color: #333;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.form-input.resident-number {
+    width: auto;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+}
+
+.form-input::placeholder {
+    color: #aaa;
+}
+
+.info-text {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.info-text strong {
+    color: #666;
+}
+
+
+.submit-btn,
+.reset-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3dc0b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover,
+.reset-btn:hover {
+    background-color: #35a69b;
+}
+
+.back-to-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-login a {
+    color: #3dc0b4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.back-to-login a:hover {
+    color: #35a69b;
+}
+
+@media (max-width: 768px) {
+    .find-section {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .form-input {
+        padding: 10px;
+    }
+} 

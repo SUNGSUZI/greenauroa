@@ -1,0 +1,365 @@
+/* 메인 컨텐츠 */
+h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+h4{
+    font-size: 14px;
+    font-weight: normal;
+}
+.content_section{
+    height: 100%;
+    display: flex;
+    gap:10px;
+    box-sizing: border-box;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink:1;
+}
+
+
+.boards{
+    width:30%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* 공지사항 */
+.notice{
+    padding: 20px; 
+    border-radius: 5%;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex: 2 2 200px;
+
+}
+.notice .title{
+    display: flex;
+    justify-content: space-between;
+}
+.notice ul{
+    padding-top:20px;
+    list-style: none;
+}
+.notice li{
+    padding:10px 0px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    border-bottom: #919191 solid 1px;
+}
+.notice li span:nth-child(2), .notice .title span{
+    font-size: 13px;
+    color:#919191;
+}
+.event{
+    padding-top: 20px; 
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+.event >h3{
+    padding:0px 20px 5px 20px;
+    box-sizing: border-box;
+}
+.event img{
+    width:100%;
+    height:85%;
+    min-width:20px; 
+    min-height: 20px;
+    justify-content: center;
+    gap:5px;
+    box-sizing: border-box;
+    
+}
+.process_station_list{
+    height: 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap:5px;
+    box-sizing: border-box;
+    
+}
+.process_station_list{
+    height: 10%;
+    box-sizing: border-box;
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    background: #EAF0F0;
+    border-radius: 50%;
+}
+.circle-check{
+    background: #3DC0B4;
+}
+#map{
+    width: 100%; 
+    height: 96%; 
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    justify-content: space-between;
+}
+.search_area{
+    z-index: 1;
+    display: flex;
+    align-self: center;
+    padding-top: 10px;
+   
+}
+.search_bar{
+    background-color: rgb(255,255,255);
+    opacity: 80%;
+    display: flex;
+    border-radius: 50px;
+    padding: 3px 10px;
+    align-items: center;
+}
+.search_bar input{
+    border:0px solid black;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    flex: 0 1 auto;
+}
+
+.search_bar input:focus{
+    outline: none;
+}
+.search_bar>div{
+    width: 30px;
+    height: 100%;
+}
+
+.search_bar img{
+    width: 30px;
+    height: 30px;
+}
+.bookmark{
+    position: relative; 
+    left: 10px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+.bookmark_img{width:20px; height: 20px;}
+
+
+/* 예약하기 버튼 */
+/* 예약 */
+.rev{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    gap:10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+
+}
+.station_info{
+    background-color: rgb(255,255,255);
+    opacity: 80%;
+    border: 1px solid #919191;
+    border-radius: 50px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.station_info>div>p{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 3px;
+}
+.rev_btn{
+    align-self: center;
+    z-index: 1;
+}
+
+/* 모달 */
+.modal_back, .alert_modal_back{
+    position:absolute;
+    display:none;
+    justify-content: center;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal, .alert_modal{
+    position:absolute;
+    top:50%; 
+    width:500px;  
+    height:400px; 
+    padding:40px;  
+    text-align: center;
+    background-color: rgb(255,255,255); 
+    border-radius:10px;
+    box-shadow:0 2px 3px 0 rgba(34,36,38,0.15);
+    transform:translateY(-50%); 
+}
+
+.modal_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal_body{
+    padding-top: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.modal_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.bicycle_type,.bicycle_operation_type{
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+ }
+ .form-label input[type="radio"], .form-label2 input[type="radio"]{
+     display: none; 
+ }
+ .form-label label:has(input[type="radio"]){
+     border: 2px solid #F4F4F4;
+     padding: 10px;
+     box-sizing: border-box;
+     width: 45%;
+     border-radius: 3px;
+     
+ }
+
+ .form-label label:has(input[type="radio"]:checked){
+     border: 2px solid #3DC0B4;
+     
+ }
+
+ .form-label label:hover, .form-label2 label:hover{
+    cursor: pointer;
+ }
+
+ /* 알림 모달 */
+ .alert_modal_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+}
+.modal_main_txt{
+    padding-top:20px;
+    font-size: 20px;
+}
+.horizontal-line {
+    width: 80%;
+    border-top: 1px solid #919191; /* 수평선 스타일 정의 */
+}
+.alert_msg{
+    color: #DD5E60;
+}
+.rev_submit_btn{
+    position: absolute;
+    bottom: 30px;
+}
+.alert_msg+p{
+    padding: 5px;
+}
+
+/* 이용권 결제페이지 */
+.coupon_main_content{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+form[name="payForm"], .payment{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.payment{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 20px 0px;
+}
+.coupon_type, .pay_type{
+    width: 100%; 
+    height: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.coupon_type label:has(input[type="radio"]){
+    border: 2px solid #3DC0B4;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 45%;
+    border-radius: 3px;
+    text-align: center;
+}
+.pay_type label:has(input[type="radio"]){
+    border: 2px solid #3DC0B4;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 30%;
+    border-radius: 3px;
+    text-align: center;
+}
+.form-label2 label:has(input[type="radio"]:checked){
+    background-color: #3DC0B4;
+    color: #fff;
+}
+.pay_type{
+    flex-wrap: wrap;
+}
+.point{
+    display: flex;
+    gap:10px;
+    align-items: end;
+}
+
+.point input{
+    border:1px solid #919191;
+    background-color: #F4F4F4;
+    margin: 0px;
+    padding: 5px;
+    height: 100%;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+}
+
+.point input:focus{
+    outline: none;
+}
+.total_pay{
+    border: 1px solid #919191;
+    background-color:#fff;
+    padding: 10px 20px;
+
+}
+.total_pay p{
+    display: flex;
+    justify-content: space-between;
+}
+.total_money{
+    /* border-top: 1px solid #919191; */
+    padding-top: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.terms{
+    list-style: none;
+}

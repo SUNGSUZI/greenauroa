@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/main_content.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId="></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 전체 화면 -->
+    <div class="main_public">
+        <!-- 공통 부분 start-->
+        <!-- 메뉴 -->
+        <div class="right_menu"  style="text-align: center;">
+            <h2>Green Aurora</h2>
+            <span class="greet">아무개님 어서오세요.</span>
+            <div class="menu_list">
+                <ul>
+                    <li> 
+                        <div>
+                            <img class="none_hover" src="../public_main/images/v39_377.png"> 
+                            <img src="../public_main/images/icons8-coupon.png"> 
+                            <span>이용권구매</span>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div>
+                            <img class="none_hover" src="../public_main/images/icons8-문의_green.png"> 
+                            <img src="../public_main/images/v39_371.png">
+                            <span>문의하기</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img class="none_hover" src="../public_main/images/v39_377.png"> 
+                            <img src="../public_main/images/v39_372.png"> 
+                            <span>이용안내</span>
+                        </div>
+                    </li> 
+                </ul>
+                <ul>
+                    <li onclick="location.href='/public_main/coupon_buy.html'">이벤트 ></li>
+                    <li> 공지사항 ></li>
+                    <li> FAQ ></li>
+                    <li> 마이페이지 ></li>
+                </ul>
+            </div>
+            <div class="logout">
+                <img src="../public_main/images/v39_379.png"> 
+                <span style="color:#ffff; bottom: 0px; left: 0px;">로그아웃</span>
+            </div>
+        </div>
+        
+
+        <!-- 왼쪽 컨텐츠 -->
+        <div class="left_menu">
+            <!-- 왼쪽 상단(시간, qr, 알림) -->
+            <div class="header_funs">
+                <div>
+                    <!-- 예약을 한 경우 -->
+                    <!-- <span>예약 취소까지 : 00 : 20</span> -->
+                    <!-- 대여를 한 경우 -->
+                    <span>남은시간 : 00 : 59</span>
+                </div>
+                <img class="icon_style1" src="../public_main/images/icons8-qr.png">
+                <img style="width: 40px; height: 40px; font-size:14px;" src="../public_main/images/icons8-alarm.png">
+            </div>
+            <!-- 공통 부분 end-->
+
+
+
+            <!-- 메인 컨텐츠 작업 start-->
+            <section class="content_section">
+            <!-- 컨텐츠 좌측 : map -->
+            <div class="map_area" style="width:70%; height: 100%;">
+                <div id="map">
+                    <!-- 검색기능 -->
+                    <div class="search_area">
+                        <div class="search_bar">
+                            <input type="text">
+                            <img src="../public_main/images/icons8-수색-48.png">
+                        </div>
+                        <div class="bookmark"> 
+                            <img class="bookmark_img" src="../public_main/images/icons8-별-50.png">
+                            즐겨찾기
+                        </div>                     
+                    </div>
+
+                    <!-- 예약 기능-->
+                    <div class="rev">
+                        <div class="station_info">
+                            <!-- 대여소 정보 -->
+                            <div>
+                                <p>
+                                    <span>2058. 서울 도시 건축 전시관역(신)</span>
+                                    <img class="bookmark_img" src="../public_main/images/icons8-별-50.png">
+                                </p>
+                                <p><span>일반 자전거: 2</span><span>새싹 자전거: 4</span></p>
+                            </div>
+                            <!-- 예약 가능한 자전거 총 개수 -->
+                            <h3 style="font-size: 16px;">6</h3>
+                        </div>
+                        <div class="rev_btn circle_btn1">예약하기</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <!-- 컨텐츠 우측 : 공지사항, 이벤트  -->
+            <div class="boards">
+                <div class="notice">
+                    <div class="title">
+                        <h3>공지사항</h3>
+                        <span>더보기 ></span>
+                    </div>
+                    <ul>
+                        <!-- for문 돌릴예정 -->
+                        <li>
+                            <span>공지사항입니다1</span>
+                            <span>2024.12.01</span>
+                        </li>
+                        <li>
+                            <span>공지사항입니다2</span>
+                            <span>2024.12.01</span>
+                        </li>
+                        <li>
+                            <span>공지사항입니다3</span>
+                            <span>2024.12.01</span>
+                        </li>
+                        <li>
+                            <span>공지사항입니다3</span>
+                            <span>2024.12.01</span>
+                        </li>
+                        <li>
+                            <span>공지사항입니다3</span>
+                            <span>2024.12.01</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="event">
+                    <h3>이벤트</h3>
+                    <img src="../public_main/images/이벤트-예시1.PNG">
+                     <!-- 진행바  -->
+                    <div class="process_station_list">
+                        <!-- 이벤트 개수만큼  -->
+                        <!-- img를 보여주는 상태바에는 circle-check 클래스명을 넣어줘야함. -->
+                        <div class="circle circle-check"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div> 
+            </div>
+            </section>
+
+
+
+
+        </div>  
+    </div>
+    <!-- 예약 모달창 -->
+    <div class="modal_back">
+        <div class="modal">
+            <div class="modal_head">
+                <h3 id="modeal-head"></h3>
+                <img class="close_btn icon_style1" src="../public_main/images/icon8-close.png">
+            </div>
+            <div class="modal_body">
+                <form class="modal_content" name="revForm"> 
+                    <div class="bicycle_type form-label">
+                        <label for="general">
+                            <input type="radio" id="general" name="bicycle_type" value="G"/>
+                            <sapn>일반따릉이</sapn>
+                        </label>
+                        <label for="sprout">
+                            <input type="radio" id="sprout" name="bicycle_type" value="S"/>
+                            <sapn>새싹따릉이</sapn>
+                        </label>
+                    </div>
+                    <div style="width: 100%; text-align: left;"><h3>자전거 운영 유형</h3></div>
+                    <div class="bicycle_operation_type form-label">
+                        <label for="LCD">
+                            <input type="radio" id="LCD" name="op_type" value="LCD"/>
+                            <sapn>LCD</sapn>
+                        </label>
+                        <label for="QR">
+                            <input type="radio" id="QR" name="op_type" value="QR"/>
+                            <sapn>QR</sapn>
+                        </label>
+                    </div>
+                    <p class="alert_msg">예약 후 20분 이내로 이용하지 않으면 예약 취소 됩니다.</p>
+                    <div class="rev_submit_btn circle_btn1">예약하기</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert 모달창 -->
+    <div class="alert_modal_back">
+        <div class="alert_modal">
+            <div class="modal_head">
+                <h3 id="alert-modeal-head"></h3>
+                <img class="close_btn icon_style1" src="../public_main/images/icon8-close.png">
+            </div>
+            <div class="modal_body">
+                <div class="alert_modal_content"> 
+                    
+                    <p class="modal_main_txt">예약 되었습니다.</p>
+                    <p>따릉이 번호 : 12345</p>
+                    
+                    <div class="horizontal-line"></div>
+
+                    <div>
+                        <p class="alert_msg">예약 후 20분 이내로 이용하지 않으면 예약 취소 됩니다.</p>
+                        <p>예약내용은 마이페이지 > 내 정보에서  확인 할 수 있습니다.</p>
+                    </div>
+                    <div class="btn2">예약취소</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // 지도
+        var mapOptions = {
+            center: new naver.maps.LatLng(37.3595704, 127.105399),
+            zoom: 10
+        };
+        var map = new naver.maps.Map('map', mapOptions);
+        // 지도 staion 클릭시 보여줘야 할 정보 
+
+
+        // 예약 open
+        const modal = document.querySelector('.modal_back');
+        const btnOpenModal=document.querySelector('.rev_btn');
+
+        btnOpenModal.addEventListener("click", ()=>{
+            modal.style.display="flex";
+            // 모달 제목 설정
+            const modal_head = document.querySelector('#modeal-head');
+            modal_head.innerText="2058. 서울 도시 건축 전시관역(신)";
+        });
+
+
+        // 예약 모달 닫기
+        const btnCloseModal = document.querySelector(".close_btn");
+        btnCloseModal.addEventListener("click",()=>{
+            modal.style.display="none";
+        })
+
+        // 모달 예약하기
+        const ModalRevBtn = document.querySelector(".rev_submit_btn");
+        const alert_modal = document.querySelector(".alert_modal_back");
+        ModalRevBtn.addEventListener("click",()=>{
+            
+            // form 값 확인
+            console.log("유형", document.revForm.bicycle_type.value)
+            console.log("운영", document.revForm.op_type.value)
+            
+
+            // ajax로 form의 값 server에 전달 -> 예약 작업
+            // 성공시
+            modal.style.display="none";
+            alert_modal.style.display="flex";
+
+            
+        })
+
+        // 모달 예약하기
+        function selectRevInfo(e) {
+            console.log(e);
+           
+            // labels.addEventListener("click",()=>{
+            //     console.log(">>>>>>1",labels)
+            // })
+        }
+        
+
+
+        // 알림 모달 닫기
+        const btnCloseAlertModal = document.querySelector(".alert_modal_back .close_btn");
+        btnCloseAlertModal.addEventListener("click",()=>{
+            alert_modal.style.display="none";
+        })
+
+        
+    </script>
+</body>
+
+</html>
+
+
+
+

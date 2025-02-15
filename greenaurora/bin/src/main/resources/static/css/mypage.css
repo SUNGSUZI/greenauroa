@@ -1,0 +1,387 @@
+/* nav-inner */
+.nav-inner .nav-container ul.nav-menu li:nth-child(2) {
+  font-weight: 700;
+}
+.point-line {
+  position: absolute;
+  top: 8px;     /* 높이만 수정 */
+  left: 0;
+}
+
+
+/* top-content */
+.top-content {
+  width: 1200px;
+  height: 270px;
+  display: flex;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.top-content .point,
+.top-content .reserve {
+  width: 590px;
+  height: 100%;
+}
+.top-content .point {
+  margin-right: 10px;
+}
+
+.top-box {
+  width: 590px;
+  height: 200px;
+  background-color: #fff;
+  border-radius:  25px;
+  border: 1px solid #919191;
+  display: flex;
+  margin-top: 10px;
+}
+.icon-area {
+  width: 181px;
+  height: 200px;
+  position: relative;
+}
+.icon {
+  position: absolute;
+  display: block;
+  width: 106px; /* 아이콘 크기는 그대로 유지 */
+  height: 106px; /* 아이콘 크기는 그대로 유지 */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 5px solid #3DC0B4;
+  background-image: url("/images/coin.png");
+  background-repeat: no-repeat;
+  background-size: 62px 62px; /* 배경 이미지만 48px로 축소 */
+  background-position: center; /* 이미지 중앙 고정 */
+}
+.point .text-area {
+  width: 409px;
+  height: 100%;
+  position: relative;
+}
+.point .text-area .point-list {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  text-decoration: underline;
+}
+.text-area .current-point {
+  position: absolute;
+  top: 50%;        /* 상단에서 50% 위치 */
+  left: 0;
+  right: 0;
+  transform: translateY(-50%); /* 자신의 높이의 절반만큼 위로 보정 */
+}
+.text-area .current-point strong {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* <!-- 대여정보가 있는 경우 --> */
+/* <!-- 대여/예약 따릉이 없는경우 --> */
+.top-box .icon-area .time-remain {
+  position: absolute;
+  display: flex;
+  width: 106px;
+  height: 106px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 5px solid #3DC0B4;
+  justify-content: center;
+  align-items: center;
+}
+.top-box .icon-area .time-remain div div {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+/* <!-- 예약내역이 있는 경우 --> */
+.top-box .icon-area .reservation {
+  position: absolute;
+  display: flex;
+  width: 106px;
+  height: 106px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 5px solid #3DC0B4;
+  justify-content: center;
+  align-items: center;
+}
+.top-box .icon-area .reservation div div {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+
+
+/* <!-- 대여정보가 있는 경우 --> */
+.rental_true {
+	width: 590px;
+	height: 200px;
+	display: flex;
+}
+.reserve .text-area-rental-true {
+  width: 409px;
+  height: 100%;
+  position: relative;
+}
+.reserve .text-area-rental-true .add-charge {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: #DD5E60;
+  font-size: 18px;
+  font-weight: 900;
+}
+.text-area-rental-true .bicycle-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+.text-area-rental-true .bicycle-text div {
+  margin-bottom: 10px;
+}
+.text-area-rental-true .bicycle-text div:last-child {
+  margin: 0px;
+}
+.text-area-rental-true .bicycle-text .over-time span {
+  color: #DD5E60;
+}
+
+/* <!-- 예약내역이 있는경우 --> */
+.reserv_ok {
+	width: 590px;
+	height: 200px;
+	display: flex;
+}
+.reserve .text-area-reservation {
+  width: 409px;
+  height: 100%;
+  position: relative;
+}
+.reserve .text-area-reservation .add-charge {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: #DD5E60;
+  font-size: 18px;
+  font-weight: 900;
+}
+.text-area-reservation .bicycle-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/* <!-- 대여/ 예약 따릉이 없는경우 --> */
+.reserv_default {
+	width: 590px;
+	height: 200px;
+	display: flex;
+}
+.reserve .text-area-rental-false {
+  width: 409px;
+  height: 100%;
+  position: relative;
+}
+.text-area-rental-false .bicycle-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+
+
+hr {
+  margin-bottom: 20px;
+}
+
+/* bottom-content */
+.bottom-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.bottom-content .member-box {
+  width: 1200px;
+  height: 450px;
+  background-color: #fff;
+  border-radius:  25px;
+  border: 1px solid #919191;
+  display: flex;                /* 플렉스 박스 활성화 */
+  flex-direction: column;       /* 세로 방향으로 아이템 정렬 */
+  justify-content: center;      /* 수직 중앙 정렬 */
+  align-items: flex-start;      /* 좌측 정렬 유지 */
+  margin-top: 10px;
+  padding: 0 30px;
+  position: relative;
+  box-sizing: border-box;
+}
+.bottom-content .member-box div {
+  margin-bottom: 30px;
+}
+.bottom-content .member-box div:last-child {
+  margin: 0;
+}
+.password {
+  display: flex;
+  align-items: center;
+}
+.password .btn {
+  margin-left: 10px;
+}
+.member-btn {
+  display: flex;
+  right: 40px;
+  bottom: 50px;
+  position: absolute;
+}
+.member-btn a {
+  margin-left: 10px;
+} 
+
+
+
+/* 추가요금 결제 팝업 디자인 */
+
+.pay-method-text,
+.use-point-text,
+.pay-amount-text {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 40px 0 10px 0;
+}
+
+
+.pay-method-radio-btn {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-check {
+  display: none;
+}
+
+.btn-secondary {
+  padding: 10px 10px;
+  border: 3px solid #3DC0B4;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.btn-check:checked + .btn-secondary {
+  background-color: #3DC0B4;
+  color: white;
+  border-color: #3DC0B4;
+}
+
+
+.pay-method-radio-btn {
+  display: flex;
+}
+input + label {
+  margin-right: 10px;
+}
+.use-point-input {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.use-point-input div {
+  position: absolutess;
+  margin-left: 10px;
+}
+.pay-add-amount,
+.pay-point,
+.pay-total {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.pay-total {
+  font-weight: 700;
+}
+.pay-add-amount-text,
+.pay-point-text,
+.pay-total-text {
+  text-align: left;
+  margin-left: 10px;
+}
+.pay-add-amount-val,
+.pay-point-val,
+.pay-total-val {
+  text-align: right;
+  margin-right: 10px;
+}
+.checkbox1,
+.checkbox2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 10px 10px 10px 10px;
+}
+.checkbox1 div,
+.checkbox2 div {
+  position: absolute;
+  left: 40px;
+}
+.add-submit-btn {
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* 예약취소 팝업 디자인 */
+.cancel-reason {
+  margin: 10px 0;
+}
+.cancel-reason-input {
+  display: flex;
+}
+.cancel-reason-input input {
+  width: 85%;
+  height: 450px;
+  margin-left: 20px;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.cancel-reason-btn {
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+}

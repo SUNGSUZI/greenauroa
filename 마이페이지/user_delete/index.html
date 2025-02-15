@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/user_delete.css" rel="stylesheet" />
+
+    <title>Green Aurora</title>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <!-- logo -->
+            <a href="/" class="logo">
+                <img src="../images/logo.png" alt="logo">
+            </a>
+
+            <!-- sub-menu -->
+            <div class="sub-menu">
+                <ul class="menu">
+                    <li>
+                        <div class="qr">
+                            <a href="#">
+                                <img src="../images/v39_280.png" alt="qr">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alarm">
+                            <a href="#">
+                                <div class="alarm_bg">3</div>
+                                <img src="../images/v39_274.png" alt="alarm">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <!-- nav-inner -->
+        <nav>
+            <div class="nav-inner">
+                <div class="nav-container">
+                    <div class="mypage">MY PAGE</div>
+                    <div class="welcome"><strong class="name">아무개</strong>님 어서오세요.</div>
+                    <ul class="nav-menu">
+                        <div class="point-line">
+                            <img src="../images/Line 31.png" alt="point-line">
+                        </div>
+                        <li class="menu1">
+                            <a href="/">내정보</a>
+                        </li>
+                        <li>
+                            <a href="../purchase_history/index.html">구매내역</a>
+                        </li>
+                        <li>
+                            <a href="/use_history/index.html">따릉이 사용내역</a>
+                        </li>
+                        <li>
+                            <a href="#">나의 문의</a>
+                        </li>
+                        <li>
+                            <a href="#">로그아웃</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- top-inner -->
+        <section>
+            <div class="content-inner">
+                <div class="bottom-content">
+                    <div class="text">회원탈퇴</div>
+                    <div class="delete-box">
+                        <div class="delete-text1">회원탈퇴를 진행합니다.</div>
+                        <div class="delete-text2">
+                            <span>Green Aurora</span>를 이용해 주셔서 감사합니다.<br>
+                            회원탈퇴를 하실 경우 아래와 같이 회원정보가 처리됩니다.
+                        </div>
+                        <div class="delete-text3">
+                            탈퇴 신청 즉시 회원탈퇴 처리되며, 해당 아이디의 회원정보 및 마일리지는 삭제처리되며, 복원할 수 없습니다.<br>
+                            회원탈퇴 이후 같은 아이디로는 재가입이 불가능 합니다.<br>
+                            이용권 기간이 남아있는 경우 즉시 탈퇴가 불가능 하오니 고객센터에 문의 바랍니다.
+                        </div>
+                        <div class="delete-text4">
+                            <label for="deleteReason">탈퇴사유</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>탈퇴사유</option>
+                                <option value="1">서비스 불만족</option>
+                                <option value="2">요금정책 불만</option>
+                                <option value="3">기타</option>
+                                <option value="3">개인정보</option>
+                              </select>
+                        </div>
+                        <div class="delete-btn">
+                            <a href="#" class="btn--black">회원탈퇴</a>
+                            <a href="/" class="btn">취소</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+
+</html>

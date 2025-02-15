@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/main_content.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=lx8zzw2u2g"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 전체 화면 -->
+    <div class="main_public">
+        <!-- 공통 부분 start-->
+        <!-- 메뉴 -->
+        <div class="right_menu"  style="text-align: center;">
+            <h2>Green Aurora</h2>
+            <span class="greet">아무개님 어서오세요.</span>
+            <div class="menu_list">
+                <ul>
+                    <li> 
+                        <div>
+                           
+                            <img class="none_hover" src="../public_main/images/v39_377.png"> 
+                            <img src="../public_main/images/icons8-coupon.png"> 
+                            <span>이용권구매</span>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div>
+                            <img class="none_hover" src="../public_main/images/icons8-문의_green.png"> 
+                            <img src="../public_main/images/v39_371.png">
+                            <span>문의하기</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img class="none_hover" src="../public_main/images/icon-이용안내_green.png"> 
+                            <img src="../public_main/images/v39_372.png"> 
+                            <span>이용안내</span>
+                        </div>
+                    </li> 
+                </ul>
+                <ul>
+                    <li> 이벤트 ></li>
+                    <li> 공지사항 ></li>
+                    <li> FAQ ></li>
+                    <li> 마이페이지 ></li>
+                </ul>
+            </div>
+            <div class="logout">
+                <img src="../public_main/images/v39_379.png"> 
+                <span style="color:#ffff; bottom: 0px; left: 0px;">로그아웃</span>
+            </div>
+        </div>
+        
+
+        <!-- 왼쪽 컨텐츠 -->
+        <div class="left_menu">
+            <!-- 왼쪽 상단(시간, qr, 알림) -->
+            <div class="header_funs">
+                <div>
+                    <!-- 예약을 한 경우 -->
+                    <!-- <span>예약 취소까지 : 00 : 20</span> -->
+                    <!-- 대여를 한 경우 -->
+                    <span>남은시간 : 00 : 59</span>
+                </div>
+                <img class="icon_style1" src="../public_main/images/icons8-qr.png">
+                <img style="width: 40px; height: 40px; font-size:14px;" src="../public_main/images/icons8-alarm.png">
+            </div>
+            <!-- 공통 부분 end-->
+
+
+
+            <!-- 메인 컨텐츠 작업 start-->
+            <section class="coupon_main_content">
+                <h3>이용권 구매</h3>
+                <form name="payForm">
+                    <div class="payment">
+                        <h4>이용권 구분</h4>
+                        <div class="coupon_type form-label2">
+                            <label for="1hour">
+                                <input type="radio" id="1hour" name="bicycle_type" value="G"/>
+                                <sapn>일일권 1시간</sapn>
+                            </label>
+                            <label for="2hour">
+                                <input type="radio" id="2hour" name="bicycle_type" value="S"/>
+                                <sapn>일일권 2시간</sapn>
+                            </label>
+                        </div>
+
+                        <h4>결제수단</h4>
+                        <div class="pay_type form-label2">
+                            <label for="card">
+                                <input type="radio" id="card" name="pay_type" value="G"/>
+                                <sapn>신용/체크카드</sapn>
+                            </label>
+                            <label for="phone">
+                                <input type="radio" id="phone" name="pay_type" value="S"/>
+                                <sapn>휴대전화</sapn>
+                            </label>
+                            <label for="payco">
+                                <input type="radio" id="payco" name="pay_type" value="S"/>
+                                <sapn>페이코</sapn>
+                            </label>
+                            <label for="kakao">
+                                <input type="radio" id="kakao" name="pay_type" value="S"/>
+                                <sapn>카카오페이</sapn>
+                            </label>
+                            <label for="zero">
+                                <input type="radio" id="zero" name="pay_type" value="S"/>
+                                <sapn>제로페이</sapn>
+                            </label>
+                        </div>
+                        
+                        <h4>포인트</h4>
+                        <div class="point">
+                            <input type="text" name="use_point">
+                            <span>사용가능한 포인트 : 1000</span>
+                        </div>
+                    </div>
+                    <div class="total_pay">
+                        <p><span>이용권</span><span>1,000원</span></p>
+                        <p class="total_money"><span>총 금액</span><span>1,000원</span></p>
+                    </div>
+                    <ul class="terms">
+                        <li>
+                            <input type="checkbox" name="" id="terms1">
+                            <label for="terms1">(필수) 서비스 이용약관 동의 (상세내용 보기)추가요금자동결제,환불규정, 이용약관에 동의하며 결제를 진행합니다.(이용권 사용안내)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="terms2">
+                            <label for="terms2">만 13세 미만의 미성년자가 서비스를 이용하는 경우, 사고 발생 시 보험 적용을 받을 수 없는 등의 불이익을 받으실 수 있습니다. (만 15세 미만의 경우 상법 제732조에 의거하여 사망 보험 적용 불가)</label>
+                        </li>
+                    </ul>
+                    
+                    <input class="payBtn btn3" type="button" value="결제하기">
+                </form>
+
+            </section>
+
+
+
+
+        </div>  
+    </div>
+    
+    <!-- alert 모달창 -->
+    <div class="alert_modal_back">
+        <div class="alert_modal">
+            <div class="modal_head">
+                <h3 id="alert-modeal-head">결제완료</h3>
+                <img class="close_btn icon_style1" src="../public_main/images/icon8-close.png">
+            </div>
+            <div class="modal_body">
+                <div class="alert_modal_content"> 
+                    
+                    <p class="modal_main_txt">이용권 구매가 완료되었습니다.</p>
+                    <p>결제완료되었습니다.</p>
+                    
+                    <div class="horizontal-line"></div>
+
+                    <div>
+                        <p class="alert_msg">최초 대여 시각부터 24시간 동안 사용 가능합니다</p>
+                        <p>마이페이지 > 구매내역에서 구매한 이용권을 확인 할 수 있습니다.</p>
+                    </div>
+                    <div class="btn2" onclick="location.href='/public_main/main_public.html'">메인페이지 이동</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+        // 결제완료시
+        // 알림 모달
+        const alert_modal = document.querySelector(".alert_modal_back");
+        const payBtn = document.querySelector(".payBtn");
+        payBtn.addEventListener("click",()=>{
+
+            console.log("dddd")
+            alert_modal.style.display="flex";
+
+            
+        })
+
+        // 알림 모달 닫기
+        const btnCloseAlertModal = document.querySelector(".alert_modal_back .close_btn");
+        btnCloseAlertModal.addEventListener("click",()=>{
+            alert_modal.style.display="none";
+        })
+    </script>
+</body>
+
+</html>
+
+
+
+

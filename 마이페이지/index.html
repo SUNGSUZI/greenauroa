@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link href="./css/common.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+
+    <title>Green Aurora</title>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <!-- logo -->
+            <a href="/" class="logo">
+                <img src="./images/logo.png" alt="logo">
+            </a>
+
+            <!-- sub-menu -->
+            <div class="sub-menu">
+                <ul class="menu">
+                    <li>
+                        <div class="qr">
+                            <a href="#">
+                                <img src="./images/v39_280.png" alt="qr">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alarm">
+                            <a href="#">
+                                <div class="alarm_bg">3</div>
+                                <img src="./images/v39_274.png" alt="alarm">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <!-- nav-inner -->
+        <nav>
+            <div class="nav-inner">
+                <div class="nav-container">
+                    <div class="mypage">MY PAGE</div>
+                    <div class="welcome"><strong class="name">아무개</strong>님 어서오세요.</div>
+                    <ul class="nav-menu">
+                        <div class="point-line">
+                            <img src="./images/Line 31.png" alt="point-line">
+                        </div>
+                        <li class="menu1">
+
+                            <a href="/">내정보</a>
+                        </li>
+                        <li>
+                            <a href="./purchase_history/index.html">구매내역</a>
+                        </li>
+                        <li>
+                            <a href="/use_history/index.html">따릉이 사용내역</a>
+                        </li>
+                        <li>
+                            <a href="#">나의 문의</a>
+                        </li>
+                        <li>
+                            <a href="#">로그아웃</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- top-inner -->
+        <section>
+            <div class="content-inner">
+                <div class="top-content">
+                    <div class="point">
+                        <div class="text">포인트</div>
+                        <div class="top-box">
+                            <div class="icon-area">
+                                <div class="icon"></div>
+                            </div>
+                            <div class="text-area">
+                                <div class="point-list">
+                                    <a href="#">포인트 내역보기</a>
+                                </div>
+                                <div class="current-point">현재 포인트 : <strong>12P</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reserve">
+                        <div class="text">예약 / 대여</div>
+                        <div class="top-box">
+                            
+                            <div class="icon-area">
+                                <!-- 대여정보가 있는 경우 -->
+                                <!-- 대여/ 예약 따릉이 없는경우 -->
+                                <div class="time-remain">
+                                    <div>남은 시간<br>
+                                        <div>00:00</div>
+                                    </div>
+                                </div>
+                                <!-- 예약내역이 있는 경우 -->
+                                <div class="reservation">
+                                    <div>예약 취소까지<br>
+                                        <div>00:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 대여정보가 있는 경우 -->
+                            <div class="text-area-rental-true">
+                                <div class="popup-content">
+                                    <div class="add-charge"><a href="#" id="showPopup">추가요금 결제</a></div>
+                                    
+                                    
+                                </div>
+                                
+                                
+                                <div class="bicycle-text">
+                                    <div class="bicycle-number">따릉이 번호 : <span>1234</span></div>
+                                    <div class="over-time">따릉이 번호 : <span>00:05</span></div>
+                                    <div class="over-time">● 기본 대여시간 초과 시 추가 요금 (200 / 5분)</div>
+                                </div>                                
+                            </div>
+                        
+                            <!-- 대여/ 예약 따릉이 없는경우 -->
+                            <div class="text-area-rental-false">
+                                <div class="bicycle-text">
+                                    <div class="bicycle-number">예약 / 대여한 따릉이가 없습니다.</div>
+                                </div>                                
+                            </div>
+                            <!-- 예약내역이 있는경우 -->
+                            <div class="text-area-reservation">
+                                <div class="add-charge"><a href="#" id="showPopup1">예약 취소</a></div>
+                                <div class="bicycle-text">
+                                    <div class="bicycle-number">따릉이 번호 : <span>1234</span></div>
+                                  </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="bottom-content">
+                    <div class="text">회원 정보</div>
+                    <div class="member-box">
+                        <div class="id">아이디 : qwaszx12</div>
+                        <div class="password">
+                            비밀번호 : <a href="./change_password/index.html" class="btn">비밀번호 변경</a>
+                        </div>
+                        <div class="email">이메일 : qwaszx12@naver.com</div>
+                        <div class="phone">휴대폰번호 : 010-1234-5678</div>
+                        <div class="addresssss">주소 : 서울 강서구 따릉이동 따릉이로 100, 빌라 1층</div>
+                        <div class="member-btn">
+                            <a href="./user_delete/index.html" class="btn">회원 탈퇴</a>
+                            <a href="./edit_information/index.html" class="btn--black">회원 정보 수정</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 추가요금 결제 선택 시 노출 팝업 -->
+        <div id="popupContainer" class="popup-container">
+            <div class="popup">
+                <h2>
+                    추가 요금 결제
+                    <label for="layerPopup" id="closePopup"></label>
+                </h2>
+                <div class="popup_content">
+                    <form action="#">
+                        <div class="pay-method">
+                            <div class="pay-method-text">결제수단</div>
+                            <div class="pay-method-radio-btn">
+                                <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                                <label class="btn btn-secondary" for="option1">신용/체크카드</label>
+                                <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                                <label class="btn btn-secondary" for="option2">휴대전화</label>
+                                <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                                <label class="btn btn-secondary" for="option3">페이코</label>
+                                <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                                <label class="btn btn-secondary" for="option4">카카오페이</label>
+                                <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                                <label class="btn btn-secondary" for="option5">제로페이</label>
+                            </div>
+                        </div>
+    
+                        <div class="use-point">
+                            <div class="use-point-text">포인트</div>
+                            <div class="use-point-input">
+                                <input type="text">
+                                <div>사용가능한 포인트 : <span>200P</span></div>
+                            </div>
+                        </div>
+    
+                        <div class="pay-amount">
+                            <div class="pay-amount-text">결제 금액</div>
+                            <hr>
+                            <div>
+                                <div class="pay-add-amount">
+                                    <div class="pay-add-amount-text">초과금액</div>
+                                    <div class="pay-add-amount-val">10,000원</div>
+                                </div>
+                                <div class="pay-point">
+                                    <div class="pay-point-text">포인트</div>
+                                    <div class="pay-point-val" style="color: #DD5E60;">-200원</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="pay-total">
+                                <div class="pay-total-text">총금액</div>
+                                <div class="pay-total-val">9,800원</div>
+                            </div>
+                        </div>
+    
+                        <div class="agreement">
+                            <div class="checkbox1">
+                                <input type="checkbox" name="agreement1" value="agreement1">
+                                <div>추가요금자동결제,환불규정, 이용약관에 동의하며 결제를 진행합니다.(이용권 사용안내)</div>
+                            </div>
+                            <div class="checkbox2">
+                                <input type="checkbox" name="agreement2" value="agreement2">
+                                <div>만 13세 미만의 미성년자가 서비스를 이용하는 경우, 사고 발생 시 보험 적용을 받을 수 없는 등의 불이익을 받으실 수 있습니다. (만 15세 미만의 경우 상법 제732조에 의거하여 사망 보험 적용 불가)</div>
+                            </div>
+                        </div>
+    
+                        <button type="submit" class="add-submit-btn btn--green-round">결제하기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- 예약취소 버튼 선택 시 노출 팝업 -->
+        <div id="popupContainer1" class="popup-container">
+            <div class="popup">
+                <h2>
+                    예약취소
+                    <label for="layerPopup" id="closePopup"></label>
+                </h2>
+                <div class="popup_content">
+                    <form action="#">
+                        <div class="cancel-reason">
+                            <label for="cancel-reason-text">취소 사유</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>시간 문제</option>
+                                <option value="1">자전거 문제</option>
+                                <option value="2">기타</option>
+                              </select>
+                        </div>
+                        <div class="cancel-reason-input">
+                            <label for="cancel-reason-input-text">직접 작성</label>
+                            <input type="text">
+                        </div>
+                        <button type="submit" class="cancel-reason-btn btn--green-round">취소하기</button>
+                    </form>
+                </div> 
+            </div> 
+        </div>
+
+        <script>
+            // 추가 결제 팝업
+            // 레이어 팝업 열기
+            document.getElementById('showPopup').addEventListener('click', function () {
+                document.getElementById('popupContainer').style.display = 'block';
+            });
+
+            // 레이어 팝업 닫기
+            document.getElementById('closePopup').addEventListener('click', function () {
+                document.getElementById('popupContainer').style.display = 'none';
+            });
+
+            // 예약취소 팝업
+            // 레이어 팝업 열기
+            document.getElementById('showPopup1').addEventListener('click', function () {
+                document.getElementById('popupContainer1').style.display = 'block';
+            });
+            // 레이어 팝업 닫기
+            document.getElementById('closePopup').addEventListener('click', function () {
+                document.getElementById('popupContainer1').style.display = 'none';
+            });
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* 전체 화면 높이를 기준으로 설정 */
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid #3dc0b4;
+    background-color: #3dc0b4;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 50px;
+    cursor: pointer;
+    /* box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.2); */
+}
+
+.button_a {
+    display: inline-block;
+    border: 1px solid #3dc0b4;
+    background-color: #3dc0b4;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 50px;
+    cursor: pointer;
+    /* box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.2); */
+}
+
+.button_dark {
+	background-color: #aaa; border-color: #aaa;
+}
+
+
+
+/* list 작업 시작 */
+	
+	.list {
+	    width: 100%;
+	    height: auto;
+	    max-height: fit-content;
+	    padding: 20px;
+	    box-sizing: border-box;
+	    overflow-y: auto;
+	    overflow-x: hidden;
+	}
+	
+	.list > .list_top {
+    	width: 80%;
+    	max-width: 700px;
+    	margin: 0 auto;
+		position: relative;
+	    text-align: center;
+    	padding: 80px 0 30px;
+	}
+	
+	.list > .list_top > .list_category > h2 {
+		color: #363636;
+	    font-size: 20px;
+	    text-align: center;
+	}
+	
+	.list > .list_top > .list_insert {
+		position: absolute;
+		right: 0;
+		bottom: 10px;
+	}
+
+	.list > .list_top > .list_insert > .button {
+		padding: 5px 30px;
+	}
+	
+	.list > .list_content {
+    	width: 80%;
+    	max-width: 700px;
+    	margin: 0 auto;
+    	padding-top: 15px;
+	}
+	
+	.list_bottom {
+    	width: 80%;
+    	max-width: 700px;
+    	margin: 0 auto;
+	}
+
+	.pagination {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    gap: 5px;
+	    margin-top: 10px;
+	}
+	
+	.page-button {
+		border-radius: 5px;
+	    display: inline-block;
+	    padding: 8px 12px;
+	    font-size: 14px;
+	    background-color: rgba(0, 0, 0, 0);
+	    border: none;
+	    cursor: pointer;
+	    transition: background-color 0.3s ease, color 0.3s ease;
+	}
+	
+	.page-button:hover {
+	  background-color: #3DC0B4;
+	  color: white;
+	}
+	
+/* list 작업 끝 */
+
+/* list_event 작업 시작 */
+
+	.list_event {
+	    border-top: 1px solid #e5e7eb;
+	    display: flex;
+	    flex-wrap: wrap;
+	    gap: 10px; /* 각 아이템 사이 간격 */
+	    justify-content: flex-start; /* 아이템을 왼쪽 정렬 */
+	    width: 100%;
+	}
+	
+	.list_event .event {
+	    width: calc(33.33% - 10px); /* 각 아이템의 너비를 33.33%로 설정 */
+	    border: 1px solid #e5e7eb;
+	    border-radius: 3px;
+	    box-sizing: border-box; /* padding을 포함한 크기로 계산 */
+	}
+	
+	.list_event .event .event_content {
+	    padding: 10px;
+	}
+	
+	.list_event .event .event_content .event_thumb {
+	    width: 100%;
+	    aspect-ratio: 1 / 1; /* 1:1 비율 유지 */
+	    overflow: hidden; /* 초과 이미지 숨김 */
+	    position: relative;
+	}
+	
+	.list_event .event .event_content .event_thumb img {
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover; /* 이미지 크기 조정 후 채우기 */
+	    object-position: center; /* 중앙 정렬 */
+	}
+	
+	.list_event .event .event_content .event_text {
+	    padding: 10px 5px;
+	}
+	
+	.list_event .event .event_content .event_text .event_title {
+	    font-size: 16px;
+	    margin-top: 5px;
+	}
+	
+	.list_event .event .event_content .event_text .event_date {
+	    font-size: 11px;
+	    color: #777;
+	}
+	
+/* list_event 작업 끝 */
+
+/* list_table 작업 시작 */
+	.list_table {
+	    table-layout: fixed;
+	    justify-content: space-between;
+	    width: 100%;
+	}
+	
+	.table_top tbody tr:hover {
+	    background-color: #f5f5f5;
+	}
+	
+	
+	.table_top thead tr:hover {
+	    background-color: transparent;
+	}
+	
+	
+	.table_top {
+	    width: 100%;
+	    border-collapse: collapse;
+	    margin: 0 auto 20px;
+	    font-size: 14px;
+	}
+	
+	.table_top thead tr {
+	    border-top: 1px solid #000 !important;
+	    border-bottom: 1px solid #000 !important;
+	}
+	
+	.table_top thead tr th {
+	    font-weight: bold;
+	    color: #000;
+	}
+	
+	.table_top tbody tr {
+	    border-bottom: 1px solid #ccc;
+	}
+	
+	.table_top th,
+	.table_top td {
+	  padding: 1rem;
+	  text-align: left;
+	  border-bottom: 1px solid #eee;
+	}
+	
+	.table_top th, td {
+	    padding: 15px;
+	    text-align: center;
+	    font-weight: normal;
+	    white-space: nowrap;
+	    overflow: hidden; /* 넘치는 텍스트를 숨김 */
+	    text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+	}
+	
+	.notice_num {
+		width: 60px;
+		min-width: 60px;
+	}
+		
+	.notice_title {
+		min-width: 140px;
+		text-align: left;
+	}
+		    
+	.notice_writer {
+		width: 80px;
+		min-width: 80px;
+		text-align: center !important
+	}
+		
+	.notice_date {
+		width: 50px;
+		min-width: 50px;
+		text-align: center !important
+	}
+	
+	.qna_num {
+		width: 50px;
+		min-width: 50px;
+	}
+	
+	.qna_title {
+		width: 100px;
+		min-width: 100px;
+		text-align: center !important
+	}
+	
+	.qna_content {
+		min-width: 140px;
+		text-align: left;	
+	}
+		
+	.qna_date {
+		width: 50px;
+		min-width: 50px;
+		text-align: center !important
+	}
+
+/* list_table 작업 끝 */
+
+
+/* detail 작업 시작 */
+
+	.detail {
+	    width: 100%;
+	    height: auto;
+		max-height: fit-content;
+	    padding: 20px;
+	    box-sizing: border-box;
+		overflow-y: auto;
+    	overflow-x: hidden;
+	}
+	
+	.detail_top {
+		text-align: center;
+	    padding: 80px 0 50px;
+	}
+	
+	.detail_top > .detail_category > h2 {
+	    color: #363636;
+	    font-size: 15px;
+	    border-bottom: 1px solid #e5e7eb;
+	    padding: 0 0 20px;
+	    display: inline-block;
+	    margin-bottom: 20px;
+	    position: relative; 
+	}
+	
+	.detail_top > .detail_title {
+	    margin: 0;
+	    word-break: break-all;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    margin-bottom: 30px;
+	    display: inline-block;
+	    font-size: 26px;
+	}
+	
+	.detail_top > .detail_date {
+		color: #777;
+	}
+	
+	.detail_bottom {
+		max-width: 900px !important;
+		margin: 0 auto;
+	    float: none !important;
+	    min-width: auto;
+	    min-height: 500px;
+	    padding: 0 15px;
+	    display: block !important;
+	}
+	
+	.detail_bottom > .detail_contents {
+	    padding: 30px 0;
+	    border-top: 1px solid #e5e7eb;
+	    min-height: 500px;
+	}
+	
+	.detail_bottom > .detail_contents > .detail_content_img {
+		max-width: 100%;
+	}	
+	
+	.detail_bottom > .detail_contents > .detail_content_img > img {
+		width: 100%;
+	    height: auto;
+	    display: block;
+	}
+	
+	.detail_bottom > .detail_contents > .detail_content {
+	    max-width: 100%;
+	}
+	
+	.detail_bottom > .detail_contents > .detail_content img {
+		width: 100%;
+	    height: auto;
+	    display: block;
+	}
+	
+	.detail_bottom > .detail_button {
+		border-top: 1px solid #e5e7eb;
+		padding-top: 15px;
+		text-align: right;
+	}
+	
+
+/* detail 작업 끝 */
+
+/* form 작업 시작 */
+
+	.form {
+		margin: 0 auto;
+		max-width: 700px;
+	    min-width: 450px;
+	    border-top: 3px double #ccced1;
+		padding-bottom: 80px;
+	}
+
+	.form-div {
+	    margin: 20px 0;
+	}
+	
+	.form-label {
+	    display: inline-block;
+	    width: 100%;
+	    margin-bottom: 5px;
+	}
+	
+	.form-control {
+		border: 1px solid #ccced1;
+	    display: inline-block;
+	    width: 100%;
+	    padding: 8px;
+	    box-sizing: border-box;
+	    border-radius: 5px;
+	}
+	
+	input {
+		border: none;
+	}
+	
+	.file {
+		display: flex; 
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px; /* 요소 간 간격 조정 */
+	}
+	
+	.file-left {
+		flex: 1; /* 나머지 공간을 차지 */
+	    margin-left: auto;
+  		text-align: left;
+	    background-color: #fff;
+	    border-color: #ccced1;
+	    color: #000;
+	    
+	}
+	.file-right {
+		width: 100px; /* 고정 크기 */
+	    margin-right: auto;
+  		text-align: center;
+	    background-color: #ccced1;
+	    border-color: #ccced1;
+	    color: #fff;
+	}
+	
+	select {
+		border: none;
+	}
+	
+	textarea {
+	    width: 100%;
+	    height: 200px;
+	    resize: none;
+	    border: none;
+	}
+	
+	.form_submit {
+	    text-align: right;
+	}
+	
+	.ck.ck-editor__main>.ck-editor__editable {
+	    min-height: 300px;
+	    max-height: 300px;
+	    overflow-x: hidden;
+	    overflow-y: scroll;
+	    background-color: #fff;
+	}
+	
+	.ck.ck-editor__main>.ck-editor__editable::-webkit-scrollbar {
+	    width: 10px;
+	}
+	
+	
+	.ck.ck-editor__main>.ck-editor__editable::-webkit-scrollbar-thumb  {
+	    background-color: #3dc0b4;
+	    border-radius: 5px;
+	}
+	
+	.ck.ck-editor__main>.ck-editor__editable::-webkit-scrollbar-thumb:hover {
+	    background-color: #37ada4;
+	}
+	
+/* form 작업 끝 */
+
+/* guide 작업 시작 */
+	.guide {
+	    position: relative;
+	    width: 100%;
+	    padding-top: 56.25%; /* 16:9 비율 (9 / 16 = 0.5625) */
+	    overflow: hidden;
+	}
+	
+	.guide iframe {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    border: 0;
+	}
+/* guide 작업 끝 */
+
+.list_lock {
+	width: 14px;
+    vertical-align: text-top;
+}

@@ -1,0 +1,366 @@
+* {
+  padding:0;
+  margin:0;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+h2{
+  font-size: 20px;
+}
+
+.main_public{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.main_public .right_menu{
+  box-sizing: border-box;
+  padding: 100px 0px 20px 0px;
+  width: 25%;
+  min-width: 200px;
+  max-width: 300px;
+  height: 100%;
+  background: #3DC0B4;
+  display: flex;
+  flex-direction: column;
+  /* align-items:center; */
+  font-size: 15px;
+  text-align: center;
+}
+
+.right_menu h2{
+  color:#fff;
+}
+
+.greet{
+  color:#fff;
+  padding: 20px 0px;
+}
+
+.right_menu .menu_list{
+  color:#fff;
+  padding-top: 50px;
+}
+
+.menu_list ul{
+  list-style: none;
+}
+
+.menu_list ul li{
+  cursor: pointer;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.menu_list ul li a{
+	 text-decoration: none;
+}
+
+.menu_list ul img, .logout img{
+  width: 30px;
+  height: 30px;
+}
+
+.menu_list ul:nth-child(1) div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+}
+
+.menu_list ul:nth-child(1) li > a {
+	color: rgba(238,249,248);
+}
+
+.menu_list ul:nth-child(1) li:hover{
+background-color: rgba(238,249,248);
+}
+
+.menu_list ul:nth-child(1) li:hover > a > div > img:nth-child(2){
+  display: inline-block;
+  height: inherit;
+  display: none;
+}
+
+.menu_list ul:nth-child(1) li:hover > a > div > img:nth-child(1){
+  display: inline-block;
+  height: inherit;
+}
+
+.menu_list ul:nth-child(1) li:hover > a > div > span{
+  display: inline-block;
+  height: inherit;
+  color: #3DC0B4;
+}
+
+.none_hover{
+  display: none;
+}
+
+.logout{
+  display: flex;
+  gap:5px;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.main_public .left_menu{
+  padding:0px 30px;
+  font-size: 15px;
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+}
+
+.main_public .header_funs{
+  padding: 20px 0px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap:20px;
+  align-items: center;
+  height: 80px;
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink:0;
+}
+
+.icon_style1{
+  width: 40px; 
+  height: 40px;
+}
+/* 알림 */
+.header_funs .alarm_bg{
+	position: absolute;
+    background-color: #DD5E60;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+    bottom: 15px;
+    right: 25px;
+}
+
+/* 버튼 */
+.circle_btn1{
+  width: 150px;
+  height: 40px;
+  background-color: #3DC0B4;
+  color:#fff;
+  border: none;
+  text-align: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn2{
+  width: 150px;
+  height: 20px;
+  border: 1px solid #919191;
+  text-align: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn3{
+    width: 200px;
+    padding: 12px;
+    background-color: #3dc0b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    text-align: center;  
+    text-decoration: none;  
+    box-sizing: border-box;   
+    text-decoration: none; 
+}
+
+/* 알림 모달 start*/
+#notification-modal-backdrop, #notification-detail-modal-backdrop, #qrScan-modal-backdrop{
+    position:absolute;
+    display:none;
+    justify-content: center;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#notification-modal, #notification-detail-modal, #qrScan-modal{
+    position:absolute;
+    top:50%; 
+    left: 50%;
+ 	transform: translate(-50%, -50%);
+    width:600px;  
+    height:400px; 
+    padding:40px;  
+    text-align: center;
+    background-color: rgb(255,255,255); 
+    border-radius:10px;
+    box-shadow:0 2px 3px 0 rgba(34,36,38,0.15);
+}
+
+#notification-modal .modal_head, 
+#notification-detail-modal .modal_head,
+#qrScan-modal .modal_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#notification-modal .modal_body, 
+#notification-detail-modal .modal_body,
+#qrScan-modal .modal_body{
+    padding-top: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+#notification-modal .alert_modal_content,  
+#notification-detail-modal .modal_body,
+#qrScan-modal .modal_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+
+/* table 작업 시작 */
+#notification-modal .table {
+    table-layout: fixed;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#notification-modal .table_top tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+#notification-modal .table_top thead tr:hover {
+    background-color: transparent;
+}
+
+
+#notification-modal .table_top{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto 20px;
+    font-size: 14px;
+}
+
+
+
+#notification-modal .table_top thead tr {
+    border-top: 1px solid #000 !important;
+    border-bottom: 1px solid #000 !important;
+}
+
+#notification-modal .table_top thead tr th {
+    font-weight: bold;
+    color: #000;
+    background-color: #f0f0f0;
+}
+
+#notification-modal .table_top tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+#notification-modal .table_top th,
+#notification-modal .table_top td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+#notification-modal .table_top th, 
+#notification-modal .table_top td {
+    padding: 15px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden; /* 넘치는 텍스트를 숨김 */
+    text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+}
+#notification-detail-modal table{
+ 	width: 100%;
+ 	height:90%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed;
+    text-align: center;
+}
+#notification-detail-modal tr{
+	border: 1px solid #eee;
+}
+#notification-detail-modal table th{
+   padding: 0px;
+   width:60px;
+   background-color: #f0f0f0;
+}
+#notification-modal .title{
+	cursor: pointer;
+}
+#notification-detail-modal table td{
+	padding: 0px;
+    font-weight: normal;
+    width: 100%;
+/* 	word-break:break-all;
+ */
+ }
+/* table 작업 끝 */
+
+/* pagination 작업 시작 */ 
+#notification-modal	.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+	
+#notification-modal	.page-button {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+	
+#notification-modal	.page-button:hover {
+  background-color: #3DC0B4;
+  color: white;
+}
+/* pagination 작업 끝 */
+ 
+/* 알림 모달 end */
+
+
+

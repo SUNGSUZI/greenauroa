@@ -313,7 +313,7 @@ FOREIGN KEY (member_id)
 REFERENCES member(member_id);
 
 
-
+CREATE SEQUENCE my_table_seq START WITH 1 INCREMENT BY 1;
 
 DROP TABLE IF EXISTS `station_info`;
 
@@ -555,3 +555,16 @@ WHERE member_id = 'admin';
 SELECT member_id, role 
 FROM member 
 WHERE member_id = 'admin';
+
+select * from member;
+
+delete from reservation;
+delete from rental;
+delete from point;
+
+
+
+
+
+
+

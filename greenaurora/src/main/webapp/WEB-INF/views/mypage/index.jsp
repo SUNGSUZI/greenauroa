@@ -24,7 +24,6 @@
     <link href="/css/mypage.css" rel="stylesheet" />
     <link href="/css/main.css" rel="stylesheet" />  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=lx8zzw2u2g&submodules=geocoder"></script>
     <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
    
     <title>Green Aurora</title>

@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
     <link href="../css/main.css" rel="stylesheet" />
     <link href="../css/main_content.css" rel="stylesheet" />
-    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=lx8zzw2u2g&submodules=geocoder"></script>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ncpClientId&submodules=geocoder"></script>
 
 </head>
 <body>
